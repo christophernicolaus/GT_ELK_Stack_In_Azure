@@ -38,9 +38,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function   | IP Address | Operating System |
 |----------|------------|------------|------------------|
 | Jump Box | Gateway    | 10.0.0.1   | Linux            |
-| Web 1    | Webserver  |            | Linux            |
-| Web 2    | Webserver  |            | Linux            |
-| ELK      | ELK Server |            | Linux            |
+| Web1     | Webserver  |            | Linux            |
+| Web2     | Webserver  |            | Linux            |
+| ELK-VM   | ELK Server |            | Linux            |
 
 ### Access Policies
 

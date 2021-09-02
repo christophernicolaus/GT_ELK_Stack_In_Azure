@@ -87,26 +87,29 @@ Diagrams/Day_1_Part_4_Project_1_Screenshot_ChristopherNicolaus.PNG
 This ELK server is configured to monitor the following machines:
 10.0.0.4: Web1
 10.0.0.5: Web2
+10.1.0.4: ELK-VM
 
 We have installed the following Beats on these machines:
 - Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- Metricbeat will monitor your specified machines by collecting metrics from the operating system and services running on that machine such as CPU usage, memory, file system, disk IO, network IO statistics, and statistics on processes running on your system""
-Filebeat will monitor your specified machines by collecting logs from the machine such as audit logs, deprecation logs, and server logs.
+- Metricbeat will monitor your specified machines by collecting metrics from the operating system and services running on that machine such as CPU usage, memory, file system, disk IO, network IO statistics, and statistics on processes running on your system
+- Filebeat will monitor your specified machines by collecting logs from the machine such as audit logs, deprecation logs, and server logs.
 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the roles folder to /etc/ansible/roles.
-- Update the hosts file to include your Webserver IP's and ELKServer IP's. Be sure to specify the correct host in your ansible playbook. For me, it would we webservers.
+- Copy the install-elk.yml to /etc/ansible/install-elk.yml
+- Update the hosts file to include your Webserver IP's and ELKServer IP's. Be sure to specify the correct host in your ansible playbook.
 - Run the playbook, and navigate to HTTP://<ELKServer_Public_IP>:5601 to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+### Commands the user will need to run
+- Put install-elk.yml under /etc/ansible
+- Edit the hosts file in /etc/ansible and include the correct IP address with ansible_python_interpreter=/usr/bin/python3 under the correct []
+- Run install-elk.yml by typing command: ansible-playbook install-elk.yml
+- Now visit  HTTP://<ELKServer_Public_IP>:5601
+- Now run the filebeat-playbook.yml and metricbeat-playbook.yml in the /etc/ansible folder by using ansible-playbook filebeat-playbook.yml and ansible-playbook metricbeat-playbook.yml

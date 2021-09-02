@@ -7,9 +7,9 @@ The files in this repository were used to configure the network depicted below.
 
 ""Images/ELK"": Update the path with the name of your diagram](Images/diagram_filename.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ""__/etc/ansible/ansible-playbook.yml___"" file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the /etc/ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._ NEED TO FIND should be = /etc/ansible/ansible-playbook.yml "This might be in /etc/ansible/roles or /etc/ansible/folders or something"
+  - _TODO: Enter the playbook file._ NEED TO FIND should be = /etc/ansible "This might be in /etc/ansible/roles or /etc/ansible/folders or something"
 
 This document contains the following details:
 - Description of the Topology
@@ -25,7 +25,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- Load balancers protect against Distributed Denial-of-Service attacks (DDoS attacks). The advantage of a jump box is that you can control all traffic by forcing the traffic into one central point, ie the jumpbox.
+- Load balancers protect against Distributed Denial-of-Service attacks (DDoS attacks). The advantage of a jumpbox is that you can control all traffic by forcing the traffic into one central point, i.e. the jumpbox.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- My home IP address - put IP Address
+- Home Network IP address - put IP Address
 
 Machines within the network can only be accessed by the Jump-Box-Provisioner
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
@@ -62,8 +62,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is able to easily deploy multitier apps by creating what is known as ansible playbooks which allow you to apply these playbooks to VMs. These ansible playbooks will configure the VM based on what is specified in the ansible playbook. 
-The main advantage is that you can re-use these ansible playbooks in order to configure VMs in the future with ease.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is able to easily deploy multitier apps by creating what is known as ansible playbooks which allow you to apply these playbooks to VMs. These ansible playbooks will configure the VM based on what is specified in the ansible playbook. The main advantage is that you can re-use these ansible playbooks in order to configure VMs in the future with ease.
 
 The playbook implements the following tasks:
 - Create a Filebeat and Metricbeat configuration file.

@@ -105,8 +105,6 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include your Webserver IP's and ELKServer IP's. Be sure to specify the correct host in your ansible playbook.
 - Run the playbook, and navigate to HTTP://<ELKServer_Public_IP>:5601 to check that the installation worked as expected.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-
 ### Commands the user will need to run
 - Put install-elk.yml under /etc/ansible
 - Edit the hosts file in /etc/ansible and include the correct IP address with ansible_python_interpreter=/usr/bin/python3 under the correct []

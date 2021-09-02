@@ -85,10 +85,8 @@ Diagrams/Day_1_Part_4_Project_1_Screenshot_ChristopherNicolaus.PNG
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
-""10.0.0.4 
-10.0.0.5
-10.1.0.4""
+10.0.0.4: Web1
+10.0.0.5: Web2
 
 We have installed the following Beats on these machines:
 - Filebeat and Metricbeat

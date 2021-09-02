@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- Home Network IP address - put IP Address
+- Home Network IP address
 
 Machines within the network can only be accessed by the Jump-Box-Provisioner
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
@@ -64,7 +64,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is able to easily deploy multitier apps by creating what is known as ansible playbooks which allow you to apply these playbooks to VMs. These ansible playbooks will configure the VM based on what is specified in the ansible playbook. The main advantage is that you can re-use these ansible playbooks in order to configure VMs in the future with ease.
 
-The playbook implements the following tasks:
+The playbook implements the following tasks: CHECK WHAT THE INSTALL-ELK.YML - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._ = just check install-elk elk installation playbook and write down what it does below
 - Create a Filebeat and Metricbeat configuration file.
 - Create an Ansible playbook that copies this configuration file to the DVWA VMs and then installs Filebeat and installs Metricbeat. 
 - Create a Playbook also installs docker.io, python3-pip, downloads and launches a docker elk container, increases the system memory, and exposes specific ports.

@@ -61,11 +61,12 @@ Machines within the network can only be accessed by the Jump-Box-Provisioner
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name                 | Publicly Accessible | Allowed IP Addresses                                  |
+|----------------------|---------------------|-------------------------------------------------------|
+| Jump-Box-Provisioner | Yes                 | Home Network IP Address                               |
+| Web1                 | No                  | Jump-Box: 23.96.107.167 LB: 20.106.163.202            |
+| Web2                 | No                  | Jump-Box: 23.96.107.167 LB: 20.106.163.202            |
+| ELK-VM               | No                  | Jump-Box: 23.96.107.167 Web1: 10.0.0.5 Web2: 10.0.0.6 |
 
 ### Elk Configuration
 
